@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public class AgenziaViaggi {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         ArrayList<GestioneTrasporti> gestoreTrasportiList = new ArrayList<>();
 
         Bus b1 = new Bus("AB123AA");
@@ -27,5 +27,20 @@ public class AgenziaViaggi {
             gestoreThreadsThreadList.add(n);
             n.start();
         }
+
+        for (Thread tThread : gestoreThreadsThreadList) {
+            try {
+                tThread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("viaggi_effettuati.txt"))) {
+            writer.write("Data: " + new Date() + "\n");
+            writer.write(s.toString());
+        }
+
+        System.out.println("Simulazione completata. ");
     }
 }

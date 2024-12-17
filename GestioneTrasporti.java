@@ -1,5 +1,3 @@
-
-
 class GestioneTrasporti implements Runnable {
     private String gruppo;
     private Bus bus;
@@ -18,13 +16,20 @@ class GestioneTrasporti implements Runnable {
     @Override
     public void run() {
         synchronized (log) {
-            log.append("Gestione del gruppo: ").append(gruppo).append("\n");
-            log.append("Bus utilizzato: ").append(bus.getTarga()).append("\n");
-            log.append("Rivenditore biglietti: ").append(rivenditore.getNome()).append("\n");
-            log.append("Traghetto utilizzato: ").append(traghetto.getCodice()).append("\n\n");
+            log.append("Partenza dagli alloggi del gruppo: ").append(gruppo).append("\n");
+            System.out.println("Partenza dagli alloggi del gruppo: " + gruppo);
 
-            System.out.println(log.toString());
-            log.setLength(0); // Pulisce il log per il prossimo gruppo
+            try {
+                Thread.sleep(2000); // Simula il tempo del viaggio in autobus
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            log.append("Arrivo al porto del gruppo: ").append(gruppo).append("\n");
+            System.out.println("Arrivo al porto del gruppo: " + gruppo);
+
+            rivenditore.vendiBiglietti(gruppo, log);
+            traghetto.trasporta(gruppo, log);
         }
     }
 }

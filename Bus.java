@@ -1,5 +1,3 @@
-
-
 class Bus {
     private String targa;
 

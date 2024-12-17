@@ -1,0 +1,19 @@
+Data: Tue Dec 17 08:41:45 CET 2024
+Partenza dagli alloggi del gruppo: francesi
+Arrivo al porto del gruppo: francesi
+Pagamento del biglietto del gruppo: francesi
+Imbarco sul traghetto del gruppo: francesi
+Partenza dal porto del gruppo: francesi
+Ritorno al porto del traghetto
+Partenza dagli alloggi del gruppo: spagnoli
+Arrivo al porto del gruppo: spagnoli
+Pagamento del biglietto del gruppo: spagnoli
+Imbarco sul traghetto del gruppo: spagnoli
+Partenza dal porto del gruppo: spagnoli
+Ritorno al porto del traghetto
+Partenza dagli alloggi del gruppo: tedeschi
+Arrivo al porto del gruppo: tedeschi
+Pagamento del biglietto del gruppo: tedeschi
+Imbarco sul traghetto del gruppo: tedeschi
+Partenza dal porto del gruppo: tedeschi
+Ritorno al porto del traghetto
